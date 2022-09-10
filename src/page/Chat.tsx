@@ -219,12 +219,12 @@ const Chat = (props: Props) => {
                 _hover={{
                   bgColor: "transparent",
                 }}
-                _active={{
-                  outline: "none"
-                }}
-                _focus={{
-                  outline: "none"
-                }}
+                // _active={{
+                //   outline: "none"
+                // }}
+                // _focus={{
+                //   outline: "none"
+                // }}
                 onClick={onOpen}
               >
                 End Chat
