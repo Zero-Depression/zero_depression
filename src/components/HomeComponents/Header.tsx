@@ -84,7 +84,7 @@ const Header = () => {
           </Box>
           <Flex align="center" direction={["column", "column", "row"]}>
           <Box 
-            h={["300px", "300px", "400px"]} 
+            h={["350px", "350px", "400px"]} 
             w={["350px", "350px", "400px"]} 
             bgColor="pryClr" 
             rounded="full" 
@@ -98,7 +98,7 @@ const Header = () => {
           </Box>
           <Stack direction={["row", "row", "column"]}>
             {socials.map((s) => (
-            <Tooltip key={s.id} label={`go to ${s.name} page`}>
+            <Tooltip key={s.id} label={`go to ${s.name} page`} hasArrow placement="bottom-end" bg="pryClr">
               <Link href={s.link} target="_blank">
                 <IconButton
                   aria-label={`${s.name} logo`}

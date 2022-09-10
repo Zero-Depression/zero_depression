@@ -14,32 +14,32 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
-import { Link as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SpacedContainer from "./SpacedContainer";
 
 const socials = [
   {
     id: 0,
     name: "Facebook",
-    link: "https://facebook.com",
+    link: "https://web.facebook.com/officialzerodepression",
     icon: FaFacebookSquare,
   },
   {
     id: 1,
     name: "Twitter",
-    link: "https://twitter.com",
+    link: "https://twitter.com/zerodepression_",
     icon: FaTwitterSquare,
   },
   {
     id: 3,
     name: "LinkedIn",
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/zero-depression/",
     icon: FaLinkedin,
   },
   {
     id: 4,
     name: "Instagram",
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/officialzerodepression/",
     icon: FaInstagram,
   },
 ];
@@ -73,81 +73,83 @@ const Footer = () => {
         </Box>
         <HStack>
           {socials.map((s) => (
-            <Tooltip key={s.id} label={`${s.name} icon`}>
-              <IconButton
-                aria-label={`${s.name} logo`}
-                bgColor="transparent"
-                fontSize="30px"
-                _hover={{
-                  bgColor: "transparent",
-                }}
-                _active={{
-                  bgColor: "transparent",
-                }}
-                _focus={{
-                  bgColor: "transparent",
-                }}
-                icon={<s.icon color="rgba(2, 7, 62, 0.74)" />}
-              />
+            <Tooltip key={s.id} label={`go to ${s.name} page`} hasArrow placement="bottom-end" bg="accent">
+              <ChakraLink href={s.link} target="_blank">
+                <IconButton
+                  aria-label={`${s.name} logo`}
+                  bgColor="transparent"
+                  fontSize="30px"
+                  _hover={{
+                    bgColor: "transparent",
+                  }}
+                  _active={{
+                    bgColor: "transparent",
+                  }}
+                  _focus={{
+                    bgColor: "transparent",
+                  }}
+                  icon={<s.icon color="rgba(2, 7, 62, 0.74)" />}
+                />
+              </ChakraLink>
             </Tooltip>
           ))}
         </HStack>
         <HStack flexDirection={["column", "column", "row"]}>
-          <ChakraLink
-            as={Router}
+          <Link to="/home">
+            <Text
             color="accent"
             fontSize={["md", "md", "sm", "md"]}
-            to="/home"
             _hover={{
               textDecoration: "none",
             }}
-          >
-            <Text>Home</Text>
-          </ChakraLink>
-          <ChakraLink
-            as={Router}
+            >
+              Home
+            </Text>
+          </Link>
+          <Link to="/about">
+            <Text
             color="accent"
             fontSize={["md", "md", "sm", "md"]}
-            to="/about"
+             _hover={{
+              textDecoration: "none",
+            }}
+            >
+              About Us
+            </Text>
+          </Link>
+          <Link to="/contact">
+            <Text
+            color="accent"
+            fontSize={["md", "md", "sm", "md"]}
+             _hover={{
+              textDecoration: "none",
+            }}
+            >
+              Contact Us
+            </Text>
+          </Link>
+          <Link to="terms-and-policies">
+            <Text
+             _hover={{
+              textDecoration: "none",
+            }}
+            color="accent"
+            fontSize={["md", "md", "sm", "md"]}
+            >
+              Terms of use
+            </Text>
+          </Link>
+          <Link to="terms-and-policies">
+            <Text
+            color="accent"
+            fontSize={["md", "md", "sm", "md"]}
             _hover={{
               textDecoration: "none",
             }}
-          >
-            <Text>About Us</Text>
-          </ChakraLink>
-          <ChakraLink
-            as={Router}
-            color="accent"
-            fontSize={["md", "md", "sm", "md"]}
-            to="/contact"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <Text>Contact Us</Text>
-          </ChakraLink>
-          <ChakraLink
-            as={Router}
-            color="accent"
-            fontSize={["md", "md", "sm", "md"]}
-            to="terms-and-policies"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <Text>Terms of use</Text>
-          </ChakraLink>
-          <ChakraLink
-            as={Router}
-            color="accent"
-            fontSize={["md", "md", "sm", "md"]}
-            to="terms-and-policies"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <Text>Privacy Policies</Text>
-          </ChakraLink>
+            >
+              Privacy Policies
+            </Text>
+          </Link>
         </HStack>
       </Flex>
     </SpacedContainer>

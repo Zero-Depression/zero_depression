@@ -26,6 +26,7 @@ const TalkButton = ({ path, bgColor, color, size }: Props) => {
             // mx={["auto", "auto", "0"]}
             _focus={{ bgColor }}
             _hover={{ bgColor, color }}
+            _active={{ bgColor, color }}
             onClick={() => navigate(path)}
           >
             Talk with a Councillor

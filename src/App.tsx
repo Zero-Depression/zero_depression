@@ -21,6 +21,7 @@ const Counsellors = lazy(() => import("./page/Counsellors"));
 const CounsellorDetail = lazy(() => import("./components/common/SingleCounsellor"));
 const Gallery = lazy(() => import("./components/common/Gallery"));
 const Talk = lazy(() => import("./components/Chat"));
+const Chat = lazy(() => import("./page/Chat"));
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -37,6 +38,7 @@ export const App = () => (
           <Route path="counsellors/:id" element={<CounsellorDetail />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="talk" element={<Talk />} />
+          <Route path="chat-with-counsellor" element={<Chat />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
