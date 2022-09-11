@@ -34,6 +34,7 @@ import {
 } from "react-icons/fa";
 import { BiArrowBack } from "react-icons/bi";
 import { AiOutlineRight } from "react-icons/ai";
+import { FiSend } from "react-icons/fi";
 import SpacedContainer from "../components/common/SpacedContainer";
 import threeDots from "../assets/3dots.png";
 import fourDots from "../assets/4dots.png";
@@ -126,21 +127,21 @@ const Chat = (props: Props) => {
             <Image
               src={threeDots}
               alt="smiley image"
-              w={["10%", "10%", "8%"]}
+              w={["10%", "10%", "10%", "8%"]}
               h={["10%", "10%", "8%"]}
               mr={6}
             />
             <Image
               src={fourDots}
               alt="smiley image"
-              w={["12%", "12%", "12%"]}
+              w={["15%", "15%", "15%", "12%"]}
               h={["10%", "10%", "8%"]}
               mr={6}
             />
             <Image
               src={fiveDots}
               alt="smiley image"
-              w={["14%", "14%", "15%"]}
+              w={["20%", "20%", "20%", "15%"]}
               h={["10%", "10%", "8%"]}
               mr={6}
             />
@@ -231,7 +232,8 @@ const Chat = (props: Props) => {
               </Button>
               <Flex w="full" transform="translateY(20px)">
                 <Input
-                  p={4}
+                  py={[1, 1, 6]}
+                  px={10}
                   placeholder="Type here......."
                   color="accent"
                   w="90%"
@@ -249,8 +251,8 @@ const Chat = (props: Props) => {
                   color="white"
                   rounded="lg"
                   border="2px solid #FFA500" 
-                  py={4}
-                  px={6}
+                  py={[1, 1, 6]}
+                  px={[1, 1, 3]}
                   display="flex"
                   alignItems="center"
                   _hover={{
@@ -266,10 +268,7 @@ const Chat = (props: Props) => {
                     outline: "none"
                   }}
               >
-                <svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M33 3L16.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M33 3L22.5 33L16.5 19.5L3 13.5L33 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <FiSend size="25px" />
                 <Text ml={3}>Reply</Text>
               </Button>
               </Flex>
@@ -437,6 +436,7 @@ const Chat = (props: Props) => {
                           bgColor="transparent"
                           display="block"
                           fontSize="md" 
+                          alignItems="center"
                           fontWeight={300} 
                           w={["100%", "100%", "80%"]} 
                           mx="auto" 

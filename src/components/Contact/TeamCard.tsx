@@ -6,12 +6,14 @@ type Props = {
   img: string;
   name: string;
   pos: string;
-  fLink: string;
-  tLink: string;
-  inLink: string;
+  // fLink: string;
+  // tLink: string;
+  // inLink: string;
 };
 
-const TeamCard = ({ img, name, pos, fLink, tLink, inLink }: Props) => {
+const TeamCard = ({ 
+  img, name, pos,
+}: Props) => {
   return (
     <Box borderRadius="10px" w={["95%", "95%", "90%"]} boxShadow="4px 4px 4px rgba(0, 0, 0, 0.3)">
       <Box>
@@ -24,7 +26,7 @@ const TeamCard = ({ img, name, pos, fLink, tLink, inLink }: Props) => {
         <Text fontSize="sm" color="accent" fontWeight={500} opacity="0.6">
           {pos}
         </Text>
-        <HStack>
+        {/* <HStack>
           <Link href={fLink} _hover={{ textDecoration: "none" }}>
             <IconButton
               aria-label="social icon"
@@ -76,7 +78,7 @@ const TeamCard = ({ img, name, pos, fLink, tLink, inLink }: Props) => {
               icon={<FaTwitterSquare color="#55ACEE" />}
             />
           </Link>
-        </HStack>
+        </HStack> */}
       </Box>
     </Box>
   );

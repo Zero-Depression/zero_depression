@@ -92,9 +92,9 @@ const TeamsCarousel = () => {
               img={member.img}
               pos={member.pos}
               name={member.name}
-              fLink={member.fLink}
-              tLink={member.tLink}
-              inLink={member.inLink}
+              // fLink={member.fLink}
+              // tLink={member.tLink}
+              // inLink={member.inLink}
             />
           ))}
         </Slider>

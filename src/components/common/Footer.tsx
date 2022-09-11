@@ -63,12 +63,12 @@ const Footer = () => {
           </Text>
           <Text
             color="accent"
-            fontSize="md"
+            fontSize={["xs", "xs", "md"]}
             fontWeight="400"
             opacity="0.6"
             ml={3}
           >
-            Copyright by {year} ZeroDepression
+            Copyright by {year}&copy; ZeroDepression
           </Text>
         </Box>
         <HStack>
@@ -94,11 +94,11 @@ const Footer = () => {
             </Tooltip>
           ))}
         </HStack>
-        <HStack flexDirection={["column", "column", "row"]}>
+        <HStack>
           <Link to="/home">
             <Text
             color="accent"
-            fontSize={["md", "md", "sm", "md"]}
+            fontSize={["xs", "xs", "sm", "md"]}
             _hover={{
               textDecoration: "none",
             }}
@@ -109,7 +109,8 @@ const Footer = () => {
           <Link to="/about">
             <Text
             color="accent"
-            fontSize={["md", "md", "sm", "md"]}
+            fontSize={["xs", "xs", "sm", "md"]}
+            textAlign={["center", "center", "initial"]}
              _hover={{
               textDecoration: "none",
             }}
@@ -120,7 +121,8 @@ const Footer = () => {
           <Link to="/contact">
             <Text
             color="accent"
-            fontSize={["md", "md", "sm", "md"]}
+            fontSize={["xs", "xs", "sm", "md"]}
+            textAlign={["center", "center", "initial"]}
              _hover={{
               textDecoration: "none",
             }}
@@ -134,7 +136,8 @@ const Footer = () => {
               textDecoration: "none",
             }}
             color="accent"
-            fontSize={["md", "md", "sm", "md"]}
+            fontSize={["xs", "xs", "sm", "md"]}
+            textAlign={["center", "center", "initial"]}
             >
               Terms of use
             </Text>
@@ -142,7 +145,8 @@ const Footer = () => {
           <Link to="terms-and-policies">
             <Text
             color="accent"
-            fontSize={["md", "md", "sm", "md"]}
+            fontSize={["xs", "xs", "sm", "md"]}
+            textAlign={["center", "center", "initial"]}
             _hover={{
               textDecoration: "none",
             }}
